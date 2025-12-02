@@ -13,8 +13,9 @@ app.use(express.json());
 
 // TODO: Cargar Rutas (lo haremos en Clase 2)
 const productRoutes = require('./src/presentation/routes/product.routes');
+const orderRoutes = require('./src/presentation/routes/order.routes');
 app.use('/api/v1/products', productRoutes);
-
+app.use('/api/v1/orders', orderRoutes);
 
 // Healthcheck Endpoint (para probar)
 app.get('/api/v1/healthcheck', (req, res) => {
